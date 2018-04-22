@@ -14,14 +14,16 @@ Summary: Create and customize interactive maps using the 'Leaflet' JavaScript li
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-leaflet-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-leaflet-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-leaflet-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-leaflet-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-leaflet-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-leaflet-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-leaflet-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-leaflet-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-leaflet-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-leaflet-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-leaflet-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-leaflet-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-leaflet/badges/version.svg)](https://anaconda.org/conda-forge/r-leaflet)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-leaflet/badges/downloads.svg)](https://anaconda.org/conda-forge/r-leaflet)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--leaflet-green.svg)](https://anaconda.org/conda-forge/r-leaflet) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-leaflet.svg)](https://anaconda.org/conda-forge/r-leaflet) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-leaflet.svg)](https://anaconda.org/conda-forge/r-leaflet) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-leaflet.svg)](https://anaconda.org/conda-forge/r-leaflet) |
 
 Installing r-leaflet
 ====================
