@@ -1,4 +1,4 @@
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/leaflet_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/leaflet/leaflet_{{ version }}.tar.gz
-  sha256: 9876d5adf3235ea5683db79ec2435d3997c626774e8c4ec4ef14022e24dfcf06
+  sha256: fa448d20940e01e953e0706fc5064b0fa347e69fa967792599eb03c52b2e3114
 
 build:
   number: 0
