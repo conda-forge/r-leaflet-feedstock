@@ -1,5 +1,4 @@
-{% set version = "2.0.1" %}
-
+{% set version = '2.0.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,20 +9,22 @@ package:
 source:
   fn: leaflet_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/leaflet_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/leaflet/leaflet_{{ version }}.tar.gz
-  sha256: 9876d5adf3235ea5683db79ec2435d3997c626774e8c4ec4ef14022e24dfcf06
+    - {{ cran_mirror }}/src/contrib/leaflet_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/leaflet/leaflet_{{ version }}.tar.gz
+  sha256: fa448d20940e01e953e0706fc5064b0fa347e69fa967792599eb03c52b2e3114
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-rcolorbrewer
     - r-base64enc
@@ -34,10 +35,9 @@ requirements:
     - r-markdown
     - r-png
     - r-raster
-    - r-scales >=0.2.5
+    - r-scales >=1.0.0
     - r-sp
-    - r-viridis
-
+    - r-viridis >=0.5.1
   run:
     - r-base
     - r-rcolorbrewer
@@ -49,13 +49,13 @@ requirements:
     - r-markdown
     - r-png
     - r-raster
-    - r-scales >=0.2.5
+    - r-scales >=1.0.0
     - r-sp
-    - r-viridis
+    - r-viridis >=0.5.1
 
 test:
   commands:
-    - $R -e "library('leaflet')"  # [not win]
+    - $R -e "library('leaflet')"           # [not win]
     - "\"%R%\" -e \"library('leaflet')\""  # [win]
 
 about:
@@ -63,10 +63,16 @@ about:
   license: GPL-3
   summary: Create and customize interactive maps using the 'Leaflet' JavaScript library and the
     'htmlwidgets' package. These maps can be used directly from the R console, from
-    'RStudio', in Shiny apps and R Markdown documents.
+    'RStudio', in Shiny applications and R Markdown documents.
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
