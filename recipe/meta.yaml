@@ -1,4 +1,4 @@
-{% set version = '2.0.2' %}
+{% set version = "2.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/leaflet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/leaflet/leaflet_{{ version }}.tar.gz
-  sha256: fa448d20940e01e953e0706fc5064b0fa347e69fa967792599eb03c52b2e3114
+  sha256: 4aaa30212ba78979aed1411efe8f22ddafec053a98306498c01f2e2a14b17314
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
