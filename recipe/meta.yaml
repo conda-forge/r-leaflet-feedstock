@@ -61,7 +61,7 @@ test:
 
 about:
   home: http://rstudio.github.io/leaflet/
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Create and customize interactive maps using the 'Leaflet' JavaScript library and the 'htmlwidgets' package. These maps can be used directly from the R console, from 'RStudio', in Shiny applications and R Markdown documents.
   license_family: GPL3
   license_file:
