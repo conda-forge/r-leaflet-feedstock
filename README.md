@@ -1,11 +1,11 @@
-About r-leaflet
-===============
+About r-leaflet-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-leaflet-feedstock/blob/main/LICENSE.txt)
 
 Home: http://rstudio.github.io/leaflet/
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-leaflet-feedstock/blob/main/LICENSE.txt)
 
 Summary: Create and customize interactive maps using the 'Leaflet' JavaScript library and the 'htmlwidgets' package. These maps can be used directly from the R console, from 'RStudio', in Shiny applications and R Markdown documents.
 
