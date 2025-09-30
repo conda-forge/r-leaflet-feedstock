@@ -17,40 +17,47 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-rcolorbrewer
-    - r-base64enc
     - r-crosstalk
     - r-htmltools
-    - r-htmlwidgets
-    - r-leaflet.providers >=1.8.0
+    - r-htmlwidgets >=1.5.4
+    - r-jquerylib
+    - r-leaflet.providers >=2.0.0
     - r-magrittr
-    - r-markdown
     - r-png
-    - r-raster
+    - r-raster >=3.6.3
+    - r-rlang
     - r-scales >=1.0.0
-    - r-sp
-    - r-viridis >=0.5.1
+    - r-sf >=0.9_6
+    - r-viridislite
+    - r-xfun
   run:
     - r-base
     - r-rcolorbrewer
-    - r-base64enc
     - r-crosstalk
     - r-htmltools
-    - r-htmlwidgets
-    - r-leaflet.providers >=1.8.0
+    - r-htmlwidgets >=1.5.4
+    - r-jquerylib
+    - r-leaflet.providers >=2.0.0
     - r-magrittr
-    - r-markdown
     - r-png
-    - r-raster
+    - r-raster >=3.6.3
+    - r-rlang
     - r-scales >=1.0.0
-    - r-sp
-    - r-viridis >=0.5.1
+    - r-sf >=0.9_6
+    - r-viridislite
+    - r-xfun
 
 test:
   commands:
@@ -59,11 +66,12 @@ test:
 
 about:
   home: http://rstudio.github.io/leaflet/
-  license: GPL-3.0-only
+  license: MIT
   summary: Create and customize interactive maps using the 'Leaflet' JavaScript library and the 'htmlwidgets' package. These maps can be used directly from the R console, from 'RStudio', in Shiny applications and R Markdown documents.
-  license_family: GPL3
+  license_family: MIT
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
